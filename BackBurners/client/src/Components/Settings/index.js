@@ -1,16 +1,13 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 
 class Settings extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
-    const { user } = this.props
     return(
+<<<<<<< HEAD
       <View style={styles.settingsContainer}>
         <View style={styles.settingsView}>
           <Text style={styles.text}>
@@ -36,50 +33,34 @@ class Settings extends Component {
             <Text>{'\t' + '\t'}</Text>Help
           </Text>
         </View>
+=======
+      <View>
+        <Text>Settings Screen</Text>
+>>>>>>> parent of 891e22d... more
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  settingsContainer: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-  },
-  settingsView: {
-    backgroundColor: '#F1FFF1',
-    height: 85,
-    marginBottom: 30,
-    justifyContent: 'center',
-    width: '90%'
-  },
-  image: {
-    height: 16,
-    width: 16,
-    //paddingLeft: 10
-  },
-  text: {
-    color: '#248841',
-    fontSize: 18,
-    fontWeight: 'bold',
-  }
-})
-
 const mapState = state => {
-  return {
-    user: state.user
+    return {
+      
+    };
   };
-};
-
-const mapDispatch = dispatch => {
-  return {
-    
+  
+  const mapDispatch = dispatch => {
+    return {
+      
+    };
   };
-};
+  
+  const SettingsConnect = connect(
+    mapState,
+    mapDispatch
+  )(Settings);
+  
+  export default SettingsConnect;
 
-const SettingsConnect = connect(mapState, mapDispatch)(Settings);
-
-export default SettingsConnect;
-
-export const SettingsScreen = createStackNavigator({ Settings: { screen: SettingsConnect }});
+export const SettingsScreen = createStackNavigator({
+    Settings: { screen: SettingsConnect },
+});

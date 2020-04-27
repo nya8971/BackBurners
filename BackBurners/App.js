@@ -51,11 +51,19 @@ export default class App extends Component {
 }
 
 const AuthenticationNavigator = createStackNavigator({
+<<<<<<< HEAD
   //Landing: { screen: Landing},
   Login: { screen: Login},
   //SignUp: { screen: SignUp },
   //Link: { screen: Link },
   //BudgetSetup: { screen: BudgetSetup },
+=======
+  Landing: { screen: Landing },
+  Login: { screen: Login },
+  SignUp: { screen: SignUp },
+  Link: { screen: Link },
+  BudgetSetup: { screen: BudgetSetup },
+>>>>>>> parent of 891e22d... more
  /* EditCategories: { screen: EditCategories },*/
 });
 

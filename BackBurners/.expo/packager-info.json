@@ -1,10 +1,18 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
+<<<<<<< HEAD
   "packagerPort": 19003,
   "packagerPid": 61913,
   "expoServerNgrokUrl": null,
   "packagerNgrokUrl": null,
   "ngrokPid": null,
   "webpackServerPort": null
+=======
+  "packagerPort": 19001,
+  "packagerPid": 4098,
+  "expoServerNgrokUrl": "https://z6-mc7.bbridges11.backburners.exp.direct",
+  "packagerNgrokUrl": "https://packager.z6-mc7.bbridges11.backburners.exp.direct",
+  "ngrokPid": 4111
+>>>>>>> parent of 891e22d... more
 }

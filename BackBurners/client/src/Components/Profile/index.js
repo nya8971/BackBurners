@@ -1,18 +1,18 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { Text, View, StyleSheet, ScrollView, Image, Dimensions } from 'react-native';
+import { Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import { bindActionCreators } from 'redux';
-//import ImagePicker from 'react-native-image-picker'
-const height = Dimensions.get('screen').height
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      photo: null
+    render() {
+        return(
+            <View>
+                <Text>Profile Screen</Text>
+            </View>
+        );
     }
+<<<<<<< HEAD
   }
 
   /*handleChoosePhoto = () => {
@@ -116,17 +116,29 @@ const mapState = state => {
     user: state.user,
     accounts: state.accTrans.accounts,
     transactions: state.accTrans.trans
+=======
+}
+
+const mapState = state => {
+    return {
+      
+    };
+>>>>>>> parent of 891e22d... more
   };
-};
+  
+  const mapDispatch = dispatch => {
+    return {
+      
+    };
+  };
+  
+  const ProfileConnect = connect(
+    mapState,
+    mapDispatch
+  )(Profile);
+  
+  export default ProfileConnect;
 
-const mapDispatch = dispatch => {
-  return bindActionCreators({
-        
-  }, dispatch)
-};
-
-const ProfileConnect = connect(mapState, mapDispatch )(Profile);
-
-export default ProfileConnect;
-
-export const ProfileScreen = createStackNavigator({ Profile: { screen: ProfileConnect }});
+export const ProfileScreen = createStackNavigator({
+    Profile: { screen: ProfileConnect },
+});

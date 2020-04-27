@@ -4,65 +4,54 @@ import { HomeScreen } from './Home';
 import { ProfileScreen } from './Profile';
 import { ActivityScreen } from './Activity';
 import { SettingsScreen } from './Settings';
-import { AnalyticsScreen } from './Analytics';
-import { Image } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome5'
 
-const ActivityIcon = ({ tintColor }) => (
-  <Image style={{}} source={require('../Images/NavBar/Activity.png')}/>
+const homeIcon = ({ tintColor }) => (
+    <Icon name="home" size={25} color={tintColor} />
 );
 
-const AnalyticsIcon = ({ tintColor }) => (
-  <Image style={{}} source={require('../Images/NavBar/Analytics.png')}/>
+const profileIcon = ({ tintColor }) => (
+    <Icon name="user" size={25} color={tintColor} />
 );
 
-const BellIcon = ({ tintColor }) => (
-  <Image source={require('../Images/NavBar/Bell.png')}/>
+const settingsIcon = ({ tintColor }) => (
+    <Icon name="users-cog" size={25} color={tintColor} />
 );
 
-const ProfileIcon = ({ tintColor }) => (
-  <Image source={require('../Images/NavBar/Profile.png')}/>
-);
-
-const SettingsIcon = ({ tintColor }) => (
-  <Image source={require('../Images/NavBar/Settings.png')}/>
+const activityIcon = ({ tintColor }) => (
+    <Icon name="chart-line" size={25} color={tintColor} />
 );
 
 const Navbar = createMaterialBottomTabNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      tabBarIcon: ActivityIcon
+      tabBarIcon: homeIcon
     }
   },
   Activity: {
     screen: ActivityScreen,
     navigationOptions: {
-      tabBarIcon: BellIcon
-    }
-  },
-  Analytics: {
-    screen: AnalyticsScreen,
-    navigationOptions: {
-      tabBarIcon: AnalyticsIcon
-    }
-  },
-  Profile: {
-    screen: ProfileScreen,
-    navigationOptions: {
-      tabBarIcon: ProfileIcon
+      tabBarIcon: activityIcon
     }
   },
   Settings: {
     screen: SettingsScreen,
     navigationOptions: {
-      tabBarIcon: SettingsIcon
+      tabBarIcon: settingsIcon
+    }
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      tabBarIcon: profileIcon
     }
   }
   },{
   initialRouteName: 'Home',
   activeTintColor: 'red',
   inactiveTintColor: '#FFFFFF',
-  barStyle: { backgroundColor: '#54C134'}
+  barStyle: { backgroundColor: 'yellow'}
   }
 );
 
